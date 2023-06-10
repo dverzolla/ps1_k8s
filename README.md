@@ -14,3 +14,7 @@ To apply, source ```~/.bashrc``` again.
 ```sh
 source ~/.bashrc
 ```
+
+If you are looking for a powerful alternative, look here: 
+
+https://github.com/jonmosco/kube-ps1
