@@ -24,7 +24,6 @@ ps1_k8s() {
         RE='^current.*production.*$'
         if(grep -qe ${RE} ~/.kube/config); then
                 # is production
-                # export PS1="\e[0;31m[\u@\h \w]\$ \e[m"
                 export PS1="\e[${SET};${FG_COLOR};${BG_COLOR}m[\u@\h \w]\$${RESET_COLOR} "
         else
                 # return the PS1 to regular one
