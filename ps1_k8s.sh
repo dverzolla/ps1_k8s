@@ -4,7 +4,7 @@ ps1_k8s() {
         # +-------------------+-------------------+-------------------+
         # |        SET        |     FG COLORS     |     BG COLORS     |       
         # +-------------------+-------------------+-------------------+
-        # | REGULAR     = 0   | CURRENT = 1       + CURRENT = 1       |
+        # | REGULAR     = 0   | CURRENT = 1       | CURRENT = 1       |
         # | BOLD/BRIGHT = 1   | BLACK   = 30      | BLACK   = 40      |
         # | DIM         = 2   | RED     = 31      | RED     = 41      |
         # | ITALIC      = 3   | GREEN   = 32      | GREEN   = 42      |
