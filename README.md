@@ -1,15 +1,15 @@
 # ps1_k8s
-Change PS1 color based in kubernetes config context
+Change PS1 color based in kubernetes config context.
 
 ## Why? 
-Nobody wants to bring trouble to production environment. This small script colorize PS1 to red when a given regex is match. In my case was the string ```production```.
+Nobody wants to bring trouble for production environment. This small script colorize PS1 to a color when a given regex is match. In my case was the string ```production```, edit ```RE``` variable to change to the name as you want.
 
-Edit ```re_to_match``` variable to change a name you need. 
+The default color is: ```background default (pre existing)```, ```foreground red```. Read the code and change the variables ```SET```, ```FG_COLOR```, ```BG_COLOR```, for other colors.
 
 ## How?
 Append ```ps1_k8s.sh``` content to  ```~/.bashrc```.
 
-To apply, source ```~/.bashrc``` again.
+To apply, source ```~/.bashrc``` again, or login again.
 
 ```sh
 source ~/.bashrc
