@@ -22,12 +22,13 @@ ps1_k8s() {
         RESET_COLOR='\e[m'
 
         RE='^current.*production.*$'
+	CONTEXT_NAME=$(grep current-context ~/.kube/config | awk '{print $2}' | sed -e s/.*\\///)
         if(grep -qe ${RE} ~/.kube/config); then
                 # is production
-                export PS1="\e[${SET};${FG_COLOR};${BG_COLOR}m[\u@\h \w]\$${RESET_COLOR} "
+                export PS1="\e[${SET};${FG_COLOR};${BG_COLOR}m[\u@\h-(${CONTEXT_NAME})-\w]\$${RESET_COLOR} "
         else
                 # return the PS1 to regular one
-                export PS1="[\u@\h \w]\$ "
+                export PS1="[\u@\h-(${CONTEXT_NAME})-\w]\$ "
         fi
 }
 
